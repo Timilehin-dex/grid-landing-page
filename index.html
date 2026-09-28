@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Bridge Collective funds schools, trains teachers, and measures what works so every child can graduate.">
+  <meta name="theme-color" content="#2a54fe">
+  <title>Frontend Mentor | Grid landing page</title>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="./assets/icons/icon-192.png">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="preload" href="./assets/fonts/inter/inter-variable.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="./output.css">
+</head>
+
+<body>
+  <div class="flex min-h-dvh flex-col">
+
+    <!-- Nav -->
+    <header
+      class="relative z-50 flex h-18 shrink-0 items-center justify-between border-b border-Blue-200/25 bg-Blue-700 px-6 lg:px-12">
+      <a href="./" class="flex items-center gap-2 text-sm font-medium">
+        <span class="size-2.5 rounded-full bg-white" aria-hidden="true"></span>
+        Bridge Collective
+      </a>
+
+      <button id="menuToggle" type="button" class="-m-2 cursor-pointer p-2" aria-expanded="false"
+        aria-controls="siteMenu" aria-label="Open menu">
+        <img id="iconMenu" src="./assets/images/icon-menu.svg" alt="" width="24" height="24">
+        <img id="iconClose" src="./assets/images/icon-close.svg" alt="" width="24" height="24" class="hidden">
+      </button>
+    </header>
+
+    <!-- Everything below the header is made inert while the menu is open -->
+    <div id="pageContent" class="flex flex-1 flex-col">
+      <main class="flex-1 lg:grid lg:grid-cols-[45fr_55fr]">
+
+        <!-- Hero -->
+        <section class="flex flex-col justify-center px-6 py-10 sm:px-8 lg:px-12 lg:py-16">
+          <h1 class="mb-6 max-w-[11ch] text-[40px] leading-[1.1] font-normal tracking-[-0.015em] lg:mb-10 lg:max-w-[6.6em] lg:text-6xl lg:leading-[1.1]">
+            A classroom for every child.
+          </h1>
+          <p class="max-w-[24em] text-[17px] leading-7 text-white/85">
+            We fund the schools, train the teachers, and measure what works — so every child we reach today becomes a
+            graduate tomorrow.
+          </p>
+        </section>
+
+        <!-- Stats -->
+        <section aria-label="Our impact" class="lg:border-l lg:border-Blue-200/25">
+          <ul class="grid h-full lg:grid-cols-2 lg:grid-rows-2">
+            <li
+              class="flex min-h-82 cursor-pointer flex-col justify-between border-t border-Blue-200/25 p-6 transition-colors hover:bg-Blue-600 lg:min-h-0 lg:border-t-0 lg:p-8">
+              <div class="flex items-start justify-between">
+                <img src="./assets/images/icon-sparkle.svg" alt="" width="32" height="32">
+                <p class="text-4xl leading-none">2.4M</p>
+              </div>
+              <div>
+                <p class="text-[17px] font-medium">Students reached</p>
+                <p class="mt-1 text-sm text-white/85">Across 31 countries since 2011.</p>
+              </div>
+            </li>
+
+            <li
+              class="flex min-h-82 cursor-pointer flex-col justify-between border-t border-Blue-200/25 p-6 transition-colors hover:bg-Blue-600 lg:min-h-0 lg:border-t-0 lg:border-l lg:p-8">
+              <div class="flex items-start justify-between">
+                <img src="./assets/images/icon-plus.svg" alt="" width="32" height="32">
+                <p class="text-4xl leading-none">1,284</p>
+              </div>
+              <div>
+                <p class="text-[17px] font-medium">Schools partnered</p>
+                <p class="mt-1 text-sm text-white/85">In 14 countries, from Kenya to Guatemala.</p>
+              </div>
+            </li>
+
+            <li
+              class="flex min-h-82 cursor-pointer flex-col justify-between border-t border-Blue-200/25 p-6 transition-colors hover:bg-Blue-600 lg:min-h-0 lg:p-8">
+              <div class="flex items-start justify-between">
+                <img src="./assets/images/icon-arrow-right.svg" alt="" width="32" height="32">
+                <p class="text-4xl leading-none">38K</p>
+              </div>
+              <div>
+                <p class="text-[17px] font-medium">Teachers trained</p>
+                <p class="mt-1 text-sm text-white/85">Equipped with modern tools and methodology.</p>
+              </div>
+            </li>
+
+            <li
+              class="flex min-h-82 cursor-pointer flex-col justify-between border-t border-Blue-200/25 p-6 transition-colors hover:bg-Blue-600 lg:min-h-0 lg:border-l lg:p-8">
+              <div class="flex items-start justify-between">
+                <img src="./assets/images/icon-trending-up.svg" alt="" width="32" height="32">
+                <p class="text-4xl leading-none">3.1×</p>
+              </div>
+              <div>
+                <p class="text-[17px] font-medium">Graduation lift</p>
+                <p class="mt-1 text-sm text-white/85">Partner schools outperform national averages 3x.</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer
+        class="flex flex-col gap-1 border-t border-Blue-200/25 px-6 py-6 text-sm lg:h-18 lg:flex-row lg:items-center lg:justify-between lg:px-12 lg:py-0">
+        <p>© 2026 Bridge Collective</p>
+        <p>Registered charity 12345678</p>
+      </footer>
+
+      <div class="px-6 py-4 text-center text-[11px]">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" class="underline">Frontend Mentor</a>.
+        Coded by <a href="#" class="underline">Your Name Here</a>.
+      </div>
+    </div>
+
+    <!-- Menu (slides in; sits below the header so the header stays clickable) -->
+    <div id="siteMenu" class="menu" data-open="false">
+      <div class="menu__overlay" data-menu-close></div>
+      <nav class="menu__panel" aria-label="Main">
+        <ul class="grid justify-items-center gap-1 px-6 pt-10 text-white lg:justify-items-end lg:px-12 lg:pt-10">
+          <li><a href="#" class="menu__link text-right">About</a></li>
+          <li><a href="#" class="menu__link text-right">Our Work</a></li>
+          <li><a href="#" class="menu__link text-right">Partners</a></li>
+          <li><a href="#" class="menu__link text-right">Annual Report</a></li>
+          <li><a href="#" class="menu__link text-right">Donate</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
